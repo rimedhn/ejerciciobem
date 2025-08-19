@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card con BEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main-container">
+
+        <!-- Card principal del usuario activo (con el modificador --active) -->
+        <div class="user-card user-card--active">
+            <div class="user-card__avatar-container">
+                <!-- URL de imagen de ejemplo -->
+                <img class="user-card__avatar" src="https://placehold.co/48x48/007bff/ffffff?text=DR" alt="Avatar de Dan Rowden">
+            </div>
+            <div class="user-card__content">
+                <span class="user-card__name">Dan Rowden</span>
+                <span class="user-card__handle">@dr</span>
+            </div>
+            <div class="user-card__icon-container">
+                <svg class="user-card__icon" fill="#ffffff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.857a.75.75 0 00-1.214-.886L9 11.293l-1.357-1.357a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4-4z" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Card de usuario inactivo (sin el modificador --active) -->
+        <div class="user-card">
+            <div class="user-card__avatar-container">
+                <img class="user-card__avatar" src="https://placehold.co/48x48/ff6600/ffffff?text=PH" alt="Avatar de Product Hunt">
+            </div>
+            <div class="user-card__content">
+                <span class="user-card__name">Product Hunt</span>
+                <span class="user-card__handle">@Product Hunt</span>
+            </div>
+            <div class="user-card__icon-container">
+                <svg class="user-card__icon user-card__icon--inactive" fill="#ccc" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.857a.75.75 0 00-1.214-.886L9 11.293l-1.357-1.357a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4-4z" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Card de usuario inactivo -->
+        <div class="user-card">
+            <div class="user-card__avatar-container">
+                <img class="user-card__avatar" src="https://placehold.co/48x48/993399/ffffff?text=JL" alt="Avatar de Janel">
+            </div>
+            <div class="user-card__content">
+                <span class="user-card__name">Janel</span>
+                <span class="user-card__handle">@JanelSGM</span>
+            </div>
+            <div class="user-card__icon-container">
+                <svg class="user-card__icon user-card__icon--inactive" fill="#ccc" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.857a.75.75 0 00-1.214-.886L9 11.293l-1.357-1.357a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4-4z" />
+                </svg>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
