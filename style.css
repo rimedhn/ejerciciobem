@@ -1,0 +1,111 @@
+/* Estilos generales para el cuerpo y el contenedor principal */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* * BEM Methodology: Block, Element, Modifier
+* B (Bloque): user-card
+* E (Elemento): user-card__avatar, user-card__name
+* M (Modificador): user-card--active, user-card__icon--inactive
+*/
+
+/* Bloque: La card de usuario completa */
+.user-card {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Modificador del Bloque: Estilos para la card activa */
+.user-card--active {
+    background-color: #337ab7;
+    color: white;
+}
+
+/* Estado al pasar el cursor (hover) */
+.user-card:hover {
+    background-color: #e6e9ed;
+}
+
+.user-card--active:hover {
+    background-color: #2b6194;
+}
+
+/* Elemento: Contenedor del avatar para controlar el espaciado */
+.user-card__avatar-container {
+    margin-right: 12px;
+}
+
+/* Elemento: La imagen del avatar */
+.user-card__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Elemento: Contenedor del nombre y el handle */
+.user-card__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que este elemento ocupe el espacio disponible */
+}
+
+/* Elemento: Nombre del usuario */
+.user-card__name {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Elemento: Handle del usuario */
+.user-card__handle {
+    font-size: 0.8rem;
+    color: #6a737d;
+}
+
+/* Modificador del Elemento: Cambia el color del handle en el estado activo */
+.user-card--active .user-card__handle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Elemento: Contenedor del ícono de check */
+.user-card__icon-container {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+}
+
+/* Elemento: El ícono en sí mismo (SVG) */
+.user-card__icon {
+    width: 100%;
+    height: 100%;
+}
+
+/* Modificador del Elemento: Estilos para el ícono inactivo */
+.user-card__icon--inactive {
+    fill: #ccc;
+}
+
+/* Estilos de la card inactiva al pasar el cursor (hover) */
+.user-card:not(.user-card--active):hover .user-card__icon--inactive {
+    fill: #999;
+}
